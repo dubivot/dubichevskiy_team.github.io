@@ -1,0 +1,88 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для шапки */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block; /* делаем ссылку блочным элементом */
+    padding: 5px 10px; /* для того чтоб padding работал*/
+}
+
+.header nav ul li:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для основного контента */
+.main {
+    padding: 20px 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.play-button {
+    display: inline-block;
+    background-image: url('joystick.png'); /* Укажите путь к картинке джойстика */
+    background-size: contain; /* для лучшего отображения джойстика*/
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 150px; /* делаем кнопку в размер картинки*/
+    text-decoration: none;
+    color: transparent; /* Скрываем текст */
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Добавляем полупрозрачный фон при наведении */
+}
+
+.team-description{
+    margin-top: 30px;
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
