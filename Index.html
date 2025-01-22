@@ -1,44 +1,135 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Dubichevskiy Team Website</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
-    <header class="header">
-        <div class="container">
-            <h1>Название Игры</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="download.html">Скачать</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="main-header">
+      <div class="container">
+          <div class="header-content">
+              <div class="logo">
+                 <img src="images/logoscomandos.png" alt="Logo">
+             </div>
+               <div class="team-name">
+                  <h1 data-i18n="teamName">Dubichevskiy Team</h1>
+              </div>
+               <nav class="main-nav">
+                 <ul>
+                      <li><a href="#" data-i18n="aboutUs">About Us</a></li>
+                     <li><a href="#" data-i18n="aboutGames">About Games</a></li>
+                      <li><a href="#" data-i18n="downloadLauncher">Download Launcher</a></li>
+                     <li><a href="#" data-i18n="support">Support</a></li>
+                       <li><a href="#" data-i18n="settings" id="settings-button">Settings</a></li>
+                  </ul>
+              </nav>
+            </div>
+      </div>
     </header>
-
-    <main class="main">
-        <div class="container">
-             <section class="hero">
-                 <a href="#" class="play-button">Играть</a>
-            </section>
-            <section class="team-description">
-                <h2>О нашей команде</h2>
-                <p>Мы - команда инди-разработчиков, которые уже целый год трудятся над созданием увлекательных и инновационных игр. Наша цель - дарить радость игрокам и вдохновлять их своим творчеством.</p>
-            </section>
-        </div>
+    <main>
+         <section class="about-team">
+             <div class="about-team-content">
+                   <h2 data-i18n="aboutTeamTitle">About Our Team</h2>
+                 <p data-i18n="aboutTeamText">We are the Dubichevskiy team, a group of passionate developers dedicated to providing you with comfortable and interesting games. Our goal is to create experiences that both challenge and entertain. We believe in community-driven development and are always looking for ways to improve our games based on your feedback. We’re committed to pushing the boundaries of game design, bringing innovative features and stories to life. Explore our worlds, become part of our community, and let’s build something amazing together. Your engagement fuels our creativity, and we're constantly striving to make our games better. Thank you for being with us on this journey.
+                 </p>
+            </div>
+        </section>
+         <section class="about-games">
+             <div class="container">
+                                    <h2 data-i18n="aboutGamesTitle">About Games</h2>
+                    <p data-i18n="aboutGamesText">Our games are crafted to transport you into immersive worlds full of rich stories and intense moments. We focus on creating an atmosphere of suspense and excitement, ensuring every playthrough is a unique experience. We push the limits of what's possible in gaming, introducing innovative gameplay mechanics and engaging narratives. Our games are designed to be both challenging and rewarding, ensuring a perfect blend of fun and strategy. Delve deep into our meticulously designed worlds, where every corner has a story to tell. Join us in our epic journeys, test your skills, and let the adventure unfold. We are committed to providing high-quality, engaging gaming experiences.
+                     </p>
+            </div>
+        </section>
+           <section class="download-launcher">
+               <div class="container">
+                 <h2 data-i18n="downloadLauncherTitle">Download Our Launcher <img src="images/arrows.png" alt="arrows"></h2>
+                  <button class="download-button" data-i18n="downloadButton">Download Launcher</button>
+                </div>
+        </section>
     </main>
-
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Название Игры. Все права защищены.</p>
+    <footer class="main-footer">
+       <div class="container">
+          <div class="footer-content">
+                <p data-i18n="footerTeamName">Dubichevskiy Team</p>
+                <button class="support-button" data-i18n="supportButton">Support</button>
+               <div class="social-links">
+                  <a href="#" class="social-link" target="_blank">
+                    <img src="images/youtube.png" alt="YouTube">
+                    </a>
+                   <a href="#" class="social-link" target="_blank">
+                   <img src="images/tiktok.png" alt="TikTok">
+                   </a>
+                    <a href="#" class="social-link" target="_blank">
+                       <img src="images/telegram.png" alt="Telegram">
+                 </a>
+           </div>
+       </div>
+     </div>
+  </footer>
+   <div id="settings-modal" class="modal">
+     <div class="modal-content">
+         <span class="close">&times;</span>
+         <h2 data-i18n="settingsTitle">Settings</h2>
+         <div class="setting-option">
+                        <label data-i18n="language">Language:</label>
+             <select id="language-select">
+                  <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                     <option value="de">Deutsch</option>
+                   <option value="fr">Français</option>
+             </select>
+         </div>
+         <div class="setting-option">
+           <label data-i18n="theme">Theme:</label>
+           <select id="theme-select">
+             <option value="white-black">White with Black text</option>
+                 <option value="white-blue">White with Blue text</option>
+                <option value="white-green">White with Green text</option>
+                <option value="white-orange">White with Orange text</option>
+                <option value="white-pink">White with Pink text</option>
+                 <option value="dark-white">Dark with White text</option>
+                 <option value="dark-blue">Dark with Blue text</option>
+                <option value="dark-green">Dark with Green text</option>
+               <option value="dark-orange">Dark with Orange text</option>
+                 <option value="dark-pink">Dark with Pink text</option>
+            </select>
+         </div>
+         <div class="setting-option">
+            <label data-i18n="musicVolume">Music Volume:</label>
+            <input type="range" id="volume-slider" min="1" max="100" value="50">
+         </div>
+         <div class="setting-option">
+             <label data-i18n="musicOnOff">Music On/Off:</label>
+               <select id="music-select">
+                <option value="on" >On</option>
+                   <option value="off" >Off</option>
+            </select>
         </div>
-    </footer>
-
+     </div>
+   </div>
+   <div id="support-modal" class="modal">
+       <div class="modal-content">
+           <span class="close">&times;</span>
+           <h2 data-i18n="supportModalTitle">Support</h2>
+             <textarea id="support-text" placeholder="Write your message here" data-i18n="supportPlaceholder"></textarea>
+            <button id="send-support-button" data-i18n="sendButton">Send</button>
+      </div>
+  </div>
+    <div id="support-sent-modal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+               <h2 data-i18n="supportSentTitle">Your message has been sent to support</h2>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="images/dltheme.mp3" type="audio/mpeg">
+    </audio>
+   <script src="script.js"></script>
 </body>
 </html>
