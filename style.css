@@ -1,88 +1,362 @@
-/* Общие стили */
+
+/* General Styles */
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease;
 }
-
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
-
-/* Стили для шапки */
-.header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+/* Header */
+.main-header {
+  background-color: #1a1a1a;
+   padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.main-header .header-content{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
-
-.header nav ul {
+.main-header .logo img {
+  height: 50px;
+}
+.main-header .team-name h1{
+     font-size: 2em;
+      color: #fff;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+}
+.main-header .team-name h1:hover {
+  color: #96ff7b;
+}
+/* Nav */
+.main-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+     margin: 0;
+    display: flex;
 }
-
-.header nav ul li {
-    display: inline;
-    margin-left: 20px;
-    transition: transform 0.3s ease;
+.main-nav ul li {
+   margin-left: 20px;
 }
-
-.header nav ul li a {
-    color: white;
+.main-nav ul li a {
+    color: #fff;
     text-decoration: none;
-    display: inline-block; /* делаем ссылку блочным элементом */
-    padding: 5px 10px; /* для того чтоб padding работал*/
+   font-size: 1.1em;
+    transition: color 0.3s ease;
 }
-
-.header nav ul li:hover {
-    transform: scale(1.1);
+.main-nav ul li a:hover {
+    color: #96ff7b;
 }
-
-/* Стили для основного контента */
-.main {
+/* Main */
+main {
     padding: 20px 0;
 }
-
-.hero {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.play-button {
-    display: inline-block;
-    background-image: url('joystick.png'); /* Укажите путь к картинке джойстика */
-    background-size: contain; /* для лучшего отображения джойстика*/
-    background-repeat: no-repeat;
+/* About Team */
+.about-team {
+    background-image: url('images/backgrountabout.png');
+     background-size: cover;
     background-position: center;
-    padding: 100px 150px; /* делаем кнопку в размер картинки*/
-    text-decoration: none;
-    color: transparent; /* Скрываем текст */
+     color: #fff;
+     padding: 60px 0;
+     text-align: center;
+      position: relative;
 }
-
-.play-button:hover {
-    background-color: rgba(0, 0, 0, 0.2); /* Добавляем полупрозрачный фон при наведении */
+.about-team::before {
+   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+    bottom: 0;
+     background-color: rgba(0, 0, 0, 0.5);
 }
-
-.team-description{
-    margin-top: 30px;
-}
-
-/* Стили для подвала */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+.about-team .about-team-content {
     position: relative;
+    z-index: 1;
 }
+.about-team h2 {
+     font-size: 2.5em;
+     margin-bottom: 15px;
+}
+.about-team p {
+    font-size: 1.1em;
+     line-height: 1.7;
+      padding: 0 10%;
+}
+/* About Games */
+.about-games {
+   background-color: #fff;
+  padding: 20px;
+   margin-bottom: 20px;
+  border-radius: 10px;
+}
+.about-games h2 {
+   font-size: 2em;
+   margin-bottom: 15px;
+   border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.about-games p {
+  font-size: 1.1em;
+  line-height: 1.7;
+    color: #333;
+}
+/* Download Launcher */
+.download-launcher {
+   background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+      text-align: center;
+}
+.download-launcher h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.download-launcher h2 img{
+  margin-left: 10px;
+    width: 30px;
+   height: auto;
+    animation: arrowPulse 2s linear infinite;
+}
+@keyframes arrowPulse {
+  0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+}
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #327349;
+    color: #fff;
+     text-decoration: none;
+    border-radius: 5px;
+     transition: background-color 0.3s ease;
+   font-size: 1.1em;
+}
+.download-button:hover {
+   background-color: #96ff7b;
+    color: #000;
+}
+/* Footer */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+}
+.main-footer .footer-content {
+   display: flex;
+   align-items: center;
+  justify-content: space-between;
+}
+.main-footer p{
+    font-size: 1.1em;
+     margin-left: 10px;
+}
+.main-footer .support-button {
+  color: #fff;
+   background-color: #327349;
+  padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+      transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+.main-footer .support-button:hover {
+    background-color: #96ff7b;
+    color: #000;
+}
+.main-footer .social-links {
+   display: flex;
+   align-items: center;
+}
+.main-footer .social-links .social-link {
+  margin-left: 15px;
+}
+.main-footer .social-links .social-link img {
+   height: 30px;
+   width: auto;
+}
+/* Settings and Support Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+     overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+     width: 60%;
+    border-radius: 10px;
+   position: relative;
+}
+.modal .close {
+   color: #aaa;
+   float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal .close:hover {
+   color: black;
+}
+.modal h2 {
+   margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  color: #333;
+}
+.modal .setting-option {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal .setting-option label {
+   margin-right: 10px;
+     color: #333;
+     font-size: 1.1em;
+}
+.modal select, .modal input[type="range"] {
+   padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+.modal textarea {
+   width: 100%;
+    padding: 10px;
+   margin-bottom: 10px;
+   box-sizing: border-box;
+    border: 1px solid #ddd;
+  border-radius: 5px;
+   resize: vertical;
+}
+/*Theme switch */
+.white-black {
+  background-color: #fff;
+   color: #000;
+}
+.white-black h2 {
+ color: #000;
+}
+.white-blue {
+  background-color: #fff;
+    color: #0000ff;
+}
+.white-blue h2{
+  color: #0000ff;
+}
+.white-green {
+   background-color: #fff;
+  color: #008000;
+}
+.white-green h2 {
+   color: #008000;
+}
+.white-orange {
+  background-color: #fff;
+    color: #ffa500;
+}
+.white-orange h2 {
+   color: #ffa500;
+}
+.white-pink {
+    background-color: #fff;
+    color: #ff69b4;
+}
+.white-pink h2 {
+   color: #ff69b4;
+}
+.dark-white{
+  background-color: #1a1a1a;
+    color: #fff;
+}
+.dark-white h2{
+  color: #fff;
+}
+.dark-blue {
+  background-color: #1a1a1a;
+    color: #0000ff;
+}
+.dark-blue h2 {
+  color: #0000ff;
+}
+.dark-green {
+    background-color: #1a1a1a;
+     color: #008000;
+}
+.dark-green h2 {
+  color: #008000;
+}
+.dark-orange {
+  background-color: #1a1a1a;
+   color: #ffa500;
+}
+.dark-orange h2 {
+  color: #ffa500;
+}
+.dark-pink {
+    background-color: #1a1a1a;
+   color: #ff69b4;
+}
+.dark-pink h2 {
+  color: #ff69b4;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-header .header-content {
+          flex-direction: column;
+          text-align: center;
+    }
+    .main-header .team-name h1 {
+       margin-left: 0;
+         margin-bottom: 10px;
+    }
+  .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+   }
+    .main-footer .footer-content {
+      flex-direction: column;
+        text-align: center;
+    }
+    .main-footer p {
+      margin-left: 0;
+    margin-bottom: 10px;
+     }
+    .main-footer .social-links {
+       margin-top: 10px;
+   }
+    .modal .modal-content{
+      width: 90%;
+       margin: 30% auto;
+     }
+    .about-team p {
+        padding: 0 5%;
+    }
+    
